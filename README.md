@@ -1,23 +1,20 @@
-# Promo Campaign Playground · PixiJS + TypeScript
+# Pixi Playground
 
-Small, focused demo for **PixiJS** promo-style mini games. It shows crisp **responsive scaling** (1280×720 letterbox, DPR-aware), a 4‑layer **parallax** background, a **nine‑slice** UI panel, and tiny **spritesheets** (coin + ship) with a couple of **particle** textures.
+A small **PixiJS + TypeScript** showcase for promo-style mini games: responsive scene (letterboxing, DPR-aware), nine-slice UI, simple loader, and a few spritesheets (coins, character, ship) + tilemap.
 
 ## Features
-
-- Logical 1280×720 scene with letterboxing (no blur, no scrollbars)
-- Nine-slice panel (96×96, 16px margins) for scalable HUD/UI
-- Spritesheets: coin (8×64), ship (4×64) + simple particles
-- Self-contained, procedurally generated art
+- Crisp scaling that preserves a logical playfield
+- Loader with progress using `@pixi/assets`
+- Spritesheets: coins (5f), character (full directional set), particles
+- Tilemap for quick level experiments
 
 ## Quick Start
-
 ```bash
 # Node 18+
 pnpm i && pnpm dev   # or: npm i && npm run dev
 ```
+Open the local URL; the scene adapts to the window while keeping 16:9.
 
-Open in the browser; the scene adapts to the window while keeping 16:9.
-
-## Assets & License
-
-All images in `public/assets/` were generated for this demo and can be used as CC0/MIT in experiments. Code is MIT. If you add third‑party assets, verify their licenses and credit authors.
+## Notes
+- Assets are small and self-contained. Replace `/public/assets/*` with your own if needed.
+- The code prefers clarity over size so it’s easy to extend (add scenes, UI, effects).
